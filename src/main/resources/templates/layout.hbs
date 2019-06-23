@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{#block "title"}}Hero Squad{{/block}}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+</head>
+<body>
+<ul>
+    <li role="presentation" class="active"><a>Home</a></li>
+    <li role="presentation"><a href="">See All </a></li>
+    <li role="presentation"><a href="/posts/new">Add a New Squad</a></li>
+</ul>
+<div class="container">
+    <!--    begin main template-->
+    <div class="page-header">
+        <img src="">
+        <h1>Welcome to my Epicodus Blog. <small>A journey into code!</small></h1>
+    </div>
+
+    <div class="col-md-12">
+        {{#block "content"}}
+
+        {{/block}}
+
+    </div>
+</div>
+<!--end main template-->
+{{#block "footer"}}
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"><a href="/posts/delete">DELETE ALL POSTS</a></p>
+        </div>
+    </footer>
+    </body>
+    </html>
+{{/block}}
