@@ -3,14 +3,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Squad {
+
     private String mName;
     private String mCause;
-    private String mMaximum;
+    private int mMaximum;
     private static List<Squad> instances = new ArrayList<>();
     private int mId;
     private List<Hero> mHeroes;
 
-    public Squad(String name,String cause,String maximum){
+    public Squad(String name,String cause,int maximum){
         this.mName =name;
         this.mCause=cause;
         this.mMaximum = maximum;
@@ -27,7 +28,7 @@ public class Squad {
         return mCause;
     }
 
-    public String getMax(){
+    public int getmMaximum(){
         return mMaximum;
     }
     public static void clearAllSquad() {
@@ -45,6 +46,7 @@ public class Squad {
     public List<Hero> getHeroes() {
         return mHeroes;
     }
+    //method to add hero to the squad
     public void addHero(Hero hero){
         mHeroes.add(hero);
     }
