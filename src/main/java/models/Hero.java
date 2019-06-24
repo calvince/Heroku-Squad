@@ -10,7 +10,6 @@ public class Hero {
     private String mWeakness;
     private static List<Hero> instances = new ArrayList<>();
     private int mId;
-    private boolean published;
     private LocalDateTime createdAt;
 
 
@@ -20,7 +19,6 @@ public class Hero {
         this.mAge = age;
         this.mPower = power;
         this.mWeakness = weakness;
-        this.published = false;
         this.createdAt = LocalDateTime.now();
         instances.add(this);
         this.mId = instances.size();
@@ -53,9 +51,7 @@ public class Hero {
         return instances.get(id-1);
     }
 
-    public boolean getPublished(){
-        return this.published;
-    }
+
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
