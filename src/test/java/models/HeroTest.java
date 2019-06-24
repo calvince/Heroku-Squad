@@ -44,12 +44,7 @@ public class HeroTest {
         Hero hero = new Hero("Omosh",24,"might","short");
         assertEquals("short", hero.getmWeakness());
     }
-    @Test
-    public void getPublished_isFalseAfterInstantiation_false() throws Exception{
-        Hero myHero = new Hero("Omosh",24,"might","short");
-        assertEquals(false,myHero.getPublished());
 
-    }
     @Test
     public void AllHeroAreCorrectlyReturned_true() {
        Hero hero = new Hero("Omosh",24,"might","short");
@@ -84,7 +79,7 @@ public class HeroTest {
         assertEquals(1, hero.getmId());
     }
     @Test
-    public void findReturnsCorrectHeroWhenMoreThanOnePostExists() throws Exception {
+    public void findReturnsCorrectHeroWhenMoreThanOneHeroExists() throws Exception {
         Hero post = setupNewPost();
         Hero otherPost = new Hero("Omosh",24,"might","short");
         assertEquals(2, Hero.findById(otherPost.getmId()).getmId());
