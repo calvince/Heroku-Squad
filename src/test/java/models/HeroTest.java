@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.time.LocalDateTime;
+
 import static org.junit.Assert.*;
 
 public class HeroTest {
@@ -20,6 +22,73 @@ public class HeroTest {
     //constructor test
     public void Hero_instantiateCorrectly_true(){
         Hero hero = new Hero("baba",23,"might","short");
-        assertEquals(true, hero instanceof Hero);
+        assertTrue( hero instanceof Hero);
+    }
+    @Test
+    public void Hero_instantiatesWith_Name_String(){
+        Hero hero = new Hero("Omosh",24,"might","short");
+        assertEquals("Omosh",hero.getName());
+    }
+    @Test
+    public void Hero_instantiatesWith_Age_int(){
+        Hero hero = new Hero("Omosh",24,"might","short");
+        assertEquals(24,hero.getmAge());
+    }
+    @Test
+    public void Hero_instantiatesCorrectlyWithPower() {
+        Hero hero = new Hero("Omosh",24,"might","short");
+        assertEquals("might", hero.getmPower());
+    }
+    @Test
+    public void Hero_instantiatesCorrectlyWithWeakness_String() {
+        Hero hero = new Hero("Omosh",24,"might","short");
+        assertEquals("short", hero.getmWeakness());
+    }
+    @Test
+    public void getPublished_isFalseAfterInstantiation_false() throws Exception{
+        Hero myHero = new Hero("Omosh",24,"might","short");
+        assertEquals(false,myHero.getPublished());
+
+    }
+    @Test
+    public void AllHeroAreCorrectlyReturned_true() {
+       Hero hero = new Hero("Omosh",24,"might","short");
+       Hero otherHero = new Hero ("Omosh",24,"might","short");
+        assertEquals(2, Hero.getAll().size());
+    }
+    @Test
+    public void AllHeroReturnAllInstances_ofHero_true() {
+        Hero hero = new Hero("Omosh",24,"might","short");
+        Hero otherHero = new Hero ("Omosh",24,"might","short");
+        assertTrue(Hero.getAll().contains(hero));
+        assertTrue(Hero.getAll().contains(otherHero));
+    }
+    @Test
+    public void getCreatedAt_instantiatesWithCurrentTime_today() throws Exception{
+        Hero myHero = setupNewPost();
+        assertEquals(LocalDateTime.now().getDayOfWeek(), myHero.getCreatedAt().getDayOfWeek());
+    }
+    private Hero setupNewPost(){
+        return new Hero("Omosh",24,"might","short");
+    }
+    @Test
+    public void findReturnsCorrectHero() throws Exception {
+        Hero hero = setupNewPost();
+        assertEquals(1, Hero.findById(hero.getmId()).getmId());
+    }
+
+
+    @Test
+    public void getId_heroesInitiateWithAnID_1(){
+        Hero hero = new Hero("Omosh",24,"might","short");
+        assertEquals(1, hero.getmId());
+    }
+    @Test
+    public void findReturnsCorrectHeroWhenMoreThanOnePostExists() throws Exception {
+        Hero post = setupNewPost();
+        Hero otherPost = new Hero("Omosh",24,"might","short");
+        assertEquals(2, Hero.findById(otherPost.getmId()).getmId());
     }
 }
+
+
