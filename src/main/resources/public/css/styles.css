@@ -8,7 +8,8 @@
     padding: 0;
     box-sizing: border-box;
     color:#fff;
-    font-family: 'Atma', cursive;
+    font-family: 'Fredericka the Great', cursive;
+    font-size:20px;
 }
 .form input[type=text]{
     color:white;
@@ -22,7 +23,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.h-1,#btn-1{
+.h-1,#btn-1,#ed-1{
     color: #fff;
     font-family: 'Fredericka the Great', cursive;
 }
@@ -93,4 +94,7 @@ body{
     #h1-1{
     color:#fff;
     font-family: 'Rye', cursive;
+    }
+    #babayao ,#hero-bak{
+        background-color:rgb(0,0,128,0.1);
     }
