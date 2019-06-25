@@ -6,9 +6,7 @@
 Once the application runs, the user can add or view squads. The user can view and add heroes to a squad with a hero
 being in only one squad at a time.
 
-## Project Interface
 
-  ![Image](https://scontent.fmba2-1.fna.fbcdn.net/v/t1.0-9/64449758_2302686220019168_9112320464801234944_n.jpg?_nc_cat=105&_nc_ht=scontent.fmba2-1.fna&oh=93c3431b43e14425678f80657c65aa1a&oe=5D866C34)
 
 ## Technologies used
 * Java.
