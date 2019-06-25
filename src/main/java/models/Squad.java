@@ -4,41 +4,41 @@ import java.util.List;
 
 public class Squad {
 
-    private String mName;
-    private String mCause;
-    private int mMaximum;
-    private static List<Squad> instances = new ArrayList<>();
+    private String name;
+    private String cause;
+    private int maximum;
+    private static ArrayList<Squad> instances = new ArrayList<>();
     private int mId;
     private List<Hero> mHeroes;
 
     public Squad(String name,String cause,int maximum){
-        this.mName =name;
-        this.mCause=cause;
-        this.mMaximum = maximum;
+        this.name =name;
+        this.cause=cause;
+        this.maximum = maximum;
         instances.add(this);
         this.mId = instances.size();
         mHeroes = new ArrayList<>();
 
     }
     public String getName(){
-        return mName;
+        return this.name;
     }
 
     public String getCause(){
-        return mCause;
+        return this.cause;
     }
 
-    public int getmMaximum(){
-        return mMaximum;
+    public int getMaximum(){
+        return maximum;
     }
     public static void clearAllSquad() {
         instances.clear();
     }
-    public static List<Squad> getAll() {
+    public static ArrayList<Squad> getAll() {
         return instances;
     }
     public int getId() {
-        return mId;
+        return this.mId;
     }
     public static Squad findById(int id){
         return instances.get(id-1);
