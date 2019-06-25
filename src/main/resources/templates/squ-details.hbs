@@ -7,18 +7,17 @@
 
     {{#if squads}}
         {{#each squads}}
-            <div class="list">
+            <div class="list" id="babayao">
                 <ul>
-                    <li><p> Squad Name: <span>{{name}}</span></p>
-                        <p> Cause: {{cause}}</p>
-                        <p>Maximum: {{maximum}}</p> </li>
-                    <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1"><a href="/hero">Add Hero to the Squad<i class="fas fa-angle-double-down "></i></a></button>
-                    <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1">View heros <i class="fas fa-angle-double-down "></i></button>
+                    <li id="ed-1"><p> Squad Name:  <span >{{name}}</span></p>
+                        <p> Cause:    <span> {{cause}}</span></p>
+                        <p>Maximum:   <span>{{maximum}}</span></p> </li>
                 </ul>
 
             </div>
-
         {{/each}}
+        <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1"><a href="/hero">Add Hero to the Squad<i class="fas fa-angle-double-down "></i></a></button>
+        <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1"><a href="/heros/list">View heros <i class="fas fa-angle-double-down "></i></a></button>
     {{else}}
         <p>No Squads yet!</p>
     {{/if}}
