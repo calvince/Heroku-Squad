@@ -1,0 +1,27 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/styles.css'>
+{{/partial}}
+{{#partial "content"}}
+
+    <h1>Squads</h1>
+
+    {{#if squads}}
+        {{#each squads}}
+            <div class="list">
+                <ul>
+                    <li><p> Squad Name: <span>{{name}}</span></p>
+                        <p> Cause: {{cause}}</p>
+                        <p>Maximum: {{maximum}}</p> </li>
+                    <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1"><a href="/hero">Add Hero to the Squad<i class="fas fa-angle-double-down "></i></a></button>
+                    <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1">View heros <i class="fas fa-angle-double-down "></i></button>
+                </ul>
+
+            </div>
+
+        {{/each}}
+    {{else}}
+        <p>No Squads yet!</p>
+    {{/if}}
+{{/partial}}
+{{>layout.hbs}}
+}
