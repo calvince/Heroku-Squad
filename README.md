@@ -7,7 +7,7 @@ Once the application runs, the user can add or view squads. The user can view an
 being in only one squad at a time.
 
 ### Setup
-* This is the [live link](https://watchman-heroku.herokuapp.com/)
+* This is the [live link]( https://squad-heroku.herokuapp.com/ )
 
 
 
