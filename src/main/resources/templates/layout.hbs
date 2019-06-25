@@ -3,21 +3,41 @@
 <head>
     <title>{{#block "title"}}Hero Squad{{/block}}</title>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    {{#block "styles"}}{{/block}}
 </head>
 <body>
-<ul>
-    <li role="presentation" class="active"><a>Home</a></li>
-    <li role="presentation"><a href="">See All </a></li>
-    <li role="presentation"><a href="/posts/new">Add a New Squad</a></li>
-</ul>
+ <nav class=" navbar navbar-1 navbar-expand-lg navbar-dark ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+            aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <h2 class="h-1">Heroes</h2>
+        <ul class="navbar-nav ml-auto nav-flex-icons ">
+            <li  class="nav-item active">
+                <a class="nav-link" href="/">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li  class="nav-item">
+                <a class="nav-link" href="/hero">Add Hero</a>
+            </li>
+            <li  class="nav-item">
+            <a class="nav-link" href="/squad">Squad</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
 <div class="container">
     <!--    begin main template-->
     <div class="page-header">
-        <img src="">
-        <h1>Welcome to my Epicodus Blog. <small>A journey into code!</small></h1>
+        <h1 id="h1-1">Welcome to Heroku Squad.</h1>
     </div>
 
     <div class="col-md-12">
@@ -31,9 +51,12 @@
 {{#block "footer"}}
     <footer class="footer">
         <div class="container">
-            <p class="text-muted"><a href="/posts/delete">DELETE ALL POSTS</a></p>
+
         </div>
     </footer>
+    <script type="text/javascript" src="./js/jquery-3.4.0.min.js"></script>
+    <script src="./js/mdb.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
     </body>
     </html>
 {{/block}}
