@@ -8,6 +8,7 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 mainClassName = 'App'
+applicationName = 'watchman-heroku'
 
 repositories {
     mavenCentral()
@@ -20,3 +21,5 @@ dependencies {
     compile 'org.slf4j:slf4j-simple:1.7.21'
 
 }
+defaultTasks=['clean']
+task stage(dependsOn:['clean','installDist'])
