@@ -7,14 +7,12 @@
 
     {{#if heros}}
         {{#each heros}}
-            <div class="list">
+            <div class="list" id="hero-bak">
                 <p>Name: <span>{{name}}</span></p>
                 <p>Age: {{age}}</p>
                 <p>Super Powers: {{power}}</p>
                 <p>Weakness: {{weakness}}</p>
      <!--       <p><a href="/heros/{{id}}">Read More...</a> </p>-->
-                <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1"><a href="/hero">Add Hero<i class="fas fa-angle-double-down "></i></a></button>
-                <button type="button"  class="btn mdb-color darken-3 animated  infinite btn-1"><a href="#">View heros <i class="fas fa-angle-double-down "></i></a></button>
 
             </div>
 
