@@ -23,7 +23,7 @@ public class SquadTest {
     @Test
     public void squad_instatiates_WithMaximum_int(){
         Squad squad = new Squad("Omosh","Commit the short",2);
-        assertEquals(2,squad.getmMaximum());
+        assertEquals(2,squad.getMaximum());
     }
     @Test
     //use of static getAll method
@@ -43,6 +43,7 @@ public class SquadTest {
     //instantiates squad with an id
     @Test
     public void squad_squadInstantiates_withId_1(){
+        Squad.clearAllSquad();
         Squad squad = new Squad("Omosh","Commit the Short",2);
         assertEquals(1,squad.getId());
     }
