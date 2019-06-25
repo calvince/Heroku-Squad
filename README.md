@@ -6,6 +6,9 @@
 Once the application runs, the user can add or view squads. The user can view and add heroes to a squad with a hero
 being in only one squad at a time.
 
+### Setup
+* This is the [live link](https://watchman-heroku.herokuapp.com/)
+
 
 
 ## Technologies used
